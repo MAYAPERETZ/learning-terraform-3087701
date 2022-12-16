@@ -53,6 +53,7 @@ module "blog_sg" {
   version = "4.16.2"
  
   vpc_id = aws_vpc.prod-vpc.id
+  name	 = "blog"
 
   ingress_rules 	= ["http-80-tcp", "https-443-tcp"]
   ingress_cidr_blocks 	= ["0.0.0.0/0"]
