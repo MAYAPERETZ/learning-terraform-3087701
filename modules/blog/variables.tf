@@ -3,10 +3,10 @@ variable "instance_type" {
   default     = "t3.nano"
 }
 
-
 variable "ami_filter" {
   description = "Name filter and owner for AMI"
-  type = object({
+
+  type    = object ({
     name  = string
     owner = string
   })
@@ -17,18 +17,15 @@ variable "ami_filter" {
   }
 }
 
-
 variable "environment" {
-  description = "Development Environment"
-  
-  type = object({
-    name = string
+  description = "Deployment environment"
+
+  type        = object ({
+    name           = string
     network_prefix = string
-
   })
-
   default = {
-    name        = "dev"
+    name           = "dev"
     network_prefix = "10.0"
   }
 }
